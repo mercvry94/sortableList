@@ -98,6 +98,8 @@ function checkOrder(){
             listItem.classList.add('right');
         }
     })
+
+
 }
 function addEventListeners(){
     const draggables = document.querySelectorAll('.draggable');
