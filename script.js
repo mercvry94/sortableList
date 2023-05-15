@@ -1,17 +1,17 @@
 const draggable_list = document.getElementById('draggable-list');
 const check = document.getElementById('check');
 
-const richestPeople = [
-    'Jeff Bezos', 
-    'Bill Gates',
-    'Warren Buffett',
-    'Bernard Arnaud',
-    'Carlos Slim Helu',
-    'Amancio Ortega',
-    'Larry Ellison',
-    'Mark Zuckerberg',
-    'Michael Bloomberg',
-    'Larry Page'
+const highestScorers = [
+    "LeBron James", 
+    "Kareem Abdul-Jabbar",
+    "Karl Malone",
+    "Kobe Bryant",
+    "Michael Jordan",
+    "Dirk Nowitzki",
+    "Wilt Chamberlain",
+    "Shaquille O'Neal",
+    "Carmelo Anthony",
+    "Moses Malone"
 ];
 
 //Store List Items 
@@ -23,7 +23,7 @@ createList();
 
 //Insert List Items into DOM
 function createList() {
-    [...richestPeople]
+    [...highestScorers]
     .map(a => ({ value: a, sort: Math.random()}))
     .sort((a,b)=> a.sort - b.sort)
     .map(a => a.value)
@@ -91,7 +91,7 @@ function checkOrder(){
     listItems.forEach((listItem, index) => {
         const personName = listItem.querySelector('.draggable').innerText.trim()
 
-        if(personName !== richestPeople[index]){
+        if(personName !== highestScorers[index]){
             listItem.classList.add('wrong')
         } else {
             listItem.classList.remove('wrong');
