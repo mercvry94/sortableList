@@ -49,7 +49,6 @@ function createList() {
 function dragStart(){
    // console.log('Event: ', 'dragstart')\
    dragStartIndex = +this.closest('li').getAttribute('data-index')
-   console.log(dragStartIndex)
 
 }
 
@@ -98,7 +97,7 @@ function checkOrder(){
             listItem.classList.add('right');
         }
     })
-    
+
 }
 function addEventListeners(){
     const draggables = document.querySelectorAll('.draggable');
